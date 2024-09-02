@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset-css.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/x-icon" href="/icon/katana.png">
+    <title>IdentiFácil</title>
+</head>
+<body>
+
+    <div class="alert-sucess" id="alert-sucess">
+        Copiado para área de transferência!
+    </div>
+
+    <div class="imagem-intro">
+        <img src="https://i.pinimg.com/originals/5a/84/01/5a84013fd2f32c45bc5e3b9eaeca22a6.gif" alt="gif samurai">
+        <h1>
+            IdentiFácil 
+        </h1>
+    </div>
+    <div class="space-generator">
+        <button onclick="cpfGenerator()">CPF</button>
+        <button onclick="cnpjGenerator()">CNPJ</button>
+        <button onclick="CEPGenerator()">CEP</button>
+    </div>
+    <div class="inputspace">
+        <div class="icon" onclick="copyPasteContent()">
+            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <input type="text" id="input-content">
+    </div>
+    <footer>Criador: <a href="https://www.linkedin.com/in/jo%C3%A3o-miguel-mendon%C3%A7a-665334187/" target="_blank">Miguel</a></footer>
+</body>
+<script src="./scripts/script.js"></script>
+</html>

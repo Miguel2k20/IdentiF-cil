@@ -1,0 +1,108 @@
+html {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background: #282a35;
+}
+body {
+    width: calc(100% - 30px);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5% 15px;
+    border-radius: 5px;
+    position: relative;
+}
+.alert-sucess {
+    position: absolute;
+    right: 0;
+    top: -20%;
+    text-align: center;
+    width: 20%;
+    padding: 1rem;
+    background: #04aa6d;
+    color: #fff;
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    font-weight: 500;
+    transition: all 1s ease;
+}
+.alert-sucess.active {
+    top: 0;
+}
+.imagem-intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.imagem-intro img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 3px 21px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 21px -3px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 21px -3px rgba(0,0,0,0.75);
+}
+.imagem-intro h1 {
+    color: #fff;
+    margin: 1rem 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size:  clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
+}
+.imagem-intro h1 a{
+    color: #04aa6d;
+}
+.space-generator {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.space-generator button {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    background: #04aa6d;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+}
+.inputspace {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+}
+.inputspace .icon {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    cursor: pointer;
+}
+.inputspace .icon svg {
+    display: block;
+    width: 100%;
+}
+.inputspace input {
+    width: calc(100% - 4rem);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size:  clamp(1rem, 1vw, 1.8rem);
+}
+footer {
+    width: 100%;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    font-weight: 600;
+}
+footer a {
+    color: #04aa6d;
+}
+    
