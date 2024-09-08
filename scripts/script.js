@@ -96,36 +96,90 @@ function cnpjGenerator() {
 
     input.value = cnpj;
 }
+
 // Gerador De Cep
-function CEPGenerator() {
+function CEPGenerator() 
+{
     var input = document.getElementById("input-content")
 
-  // Lista de faixas de CEP válidas para garantir um CEP realista
-    const faixasCep = [
-        { inicio: 01000, fim: 19999 }, // São Paulo - SP
-        { inicio: 20000, fim: 28999 }, // Rio de Janeiro - RJ
-        { inicio: 30000, fim: 39999 }, // Minas Gerais - MG
-        { inicio: 40000, fim: 48999 }, // Bahia - BA
-        { inicio: 50000, fim: 56999 }, // Pernambuco - PE
-        { inicio: 70000, fim: 72799 }, // Brasília - DF
-        { inicio: 80000, fim: 84999 }, // Paraná - PR
-        { inicio: 90000, fim: 99999 }  // Rio Grande do Sul - RS
-        // Outras faixas podem ser adicionadas conforme necessário
+    const cepArrays = [
+        "76808-196", "58406-545", "69314-224", "64258-970",
+        "72003-485", "41180-855", "79062-161", "69093-813", 
+        "29201-017", "59040-476", "69041-505", "61944-110",
+        "94416-130", "68903-465", "58040-290", "69907-804",
+        "71650-075", "31910-187", "60140-050", "39803-405",
+        "45994-393", "61940-090", "59280-971", "90830-380",
+        "64155-970", "45823-430", "48610-248", "44006-466",
+        "64083-225", "42810-320", "54715-600", "29227-412",
+        "58100-122", "69060-097", "78120-064", "94465-500",
+        "65031-220", "78557-700", "68927-363", "64076-435",
+        "29103-012", "69044-530", "21862-540", "52280-216",
+        "24867-024", "77001-088", "65044-814", "68458-060",
+        "87501-045", "69074-525", "58036-565", "30590-390",
+        "87033-240", "76801-700", "69921-755", "79320-270",
+        "91450-571", "77425-260", "68900-800", "77060-480",
+        "69917-746", "49055-100", "78553-528", "72579-120",
+        "65035-034", "69317-004", "58046-225", "68925-216",
+        "35054-274", "58305-170", "90570-100", "68511-340",
+        "93145-508", "89032-307", "66811-290", "25804-280",
+        "65066-857", "72318-021", "78141-250", "14026-900",
+    ];
+    const randomIndex = Math.floor(Math.random() * cepArrays.length);
+    const randomCep = cepArrays[randomIndex];
+    input.value = randomCep
+}
+
+function emailGerador()
+{
+    var input = document.getElementById("input-content")
+
+    const names = [
+        "joao", "miguel", "yuri", "lucas", 
+        "breno", "gabriel", "carol", "luana", 
+        "kim", "mario", "hermes", "zeca"
     ];
 
-    // Escolhe uma faixa de CEP aleatoriamente
-    const faixaEscolhida = faixasCep[Math.floor(Math.random() * faixasCep.length)];
+    const domains = [
+        "gmail", "yahoo", "outlook",
+        "hotmail", "live", "uol", "terra",
+        "globo", "email", "teste", "lotus"
+    ];
 
-    // Gera um número aleatório dentro da faixa escolhida
-    const primeiraParte = Math.floor(Math.random() * (faixaEscolhida.fim - faixaEscolhida.inicio + 1)) + faixaEscolhida.inicio;
+    const extensions = [
+        "com", "net", "org", 
+        "br", "co", "info"
+    ];
 
-    // Gera a segunda parte do CEP (3 dígitos)
-    const segundaParte = Math.floor(Math.random() * 900) + 100;
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    
+    const randomDomain = domains[Math.floor(Math.random() * domains.length)];
+    
+    const randomExtension = extensions[Math.floor(Math.random() * extensions.length)];
 
-    // Formata o CEP no padrão brasileiro (XXXXX-XXX)
-    const cepAleatorio = `${primeiraParte.toString().padStart(5, '0')}-${segundaParte}`;
+    const randomNumber = Math.floor(Math.random() * 1000);
+    
+    const randomEmail = `${randomName}${randomNumber}@${randomDomain}.${randomExtension}`;
 
-    input.value = cepAleatorio
+    input.value = randomEmail
+}
+
+function numberGerador()
+{
+    var input = document.getElementById("input-content")
+
+    const areaCode = Math.floor(Math.random() * (99 - 11 + 1)) + 11;
+
+    const isCellphone = Math.random() < 0.5;
+
+    const firstPart = isCellphone ? 9 : Math.floor(Math.random() * 8); 
+    
+    const middlePart = Math.floor(Math.random() * 9000) + 1000;
+    
+    const lastPart = Math.floor(Math.random() * 9000) + 1000;
+
+    const phoneNumber = `(${areaCode}) ${firstPart}${middlePart}-${lastPart}`;
+
+    input.value = phoneNumber
 
 }
   
