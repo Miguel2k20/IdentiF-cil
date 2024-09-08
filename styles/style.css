@@ -94,6 +94,7 @@ body {
     border-radius: 5px;
     outline: none;
     font-size:  clamp(1rem, 1vw, 1.8rem);
+    background: #fff;
 }
 footer {
     width: 100%;
